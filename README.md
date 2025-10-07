@@ -1,73 +1,32 @@
-# React + TypeScript + Vite
+# Nutrion-Tracker
+Nutrition-Tracking software that provides specific food recommendations for people diets with AI agents 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Goal: Build an app/website capable of counting the caloric, macro and micro-nutrient intake of an individual. 
 
-Currently, two official plugins are available:
+AT ALL STAGES: Consider UI-UX design to improve user retition
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+First stage: Minimal Viable Product (MVP) - Nutrition Tracker
+Langauges: C++, Python, (My)SQL
 
-## React Compiler
+    Step 1:
+    Create a personal Database that organizes the relevant data found in the FoodData Central database into Schema's to be used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    Step 2:
+    Create C++ backend that's able to compute the amount of calories, macro, and micro nutrients
+    someone inputs within the system
 
-## Expanding the ESLint configuration
+    Step 3: Create a time-series database capable of storing each user's nutrional intake  information
+    
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+    Step 4:  Create a database to store user data
+    (Does Not Need to be in C++ or SQL, this most likely needs Cloud services to conenct google accounts)
+    - Usernames/emails
+    - Passwords
+    - Nutrution information
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+    This software package/Github repo will serve as our MVP, launch of the product will begin after Stage 1 is complete.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Second Stage: Recipe Creation Feature
+Third Stage: Recommendation System for Precision Nutrition with Cultural/dietary Consideration
+Fourth Stage: AI-Pipeline for Nutrition app's Marketing Campaign
