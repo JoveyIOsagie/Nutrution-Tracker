@@ -1,8 +1,0 @@
-To create the Nutritional Database
-
-1. take the process_nutrition_data.py  python file, move it to 
-FoodData_Central_csv_2025-04-24 directory, which can be downloaded from the
-USDA website https://fdc.nal.usda.gov/download-datasets
-
-2. in Terminal, run python process_nutrition_data.py
-3. Your output should be Nutrition_Database.csv, this will be database we'll be using
